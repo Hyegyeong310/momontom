@@ -3,6 +3,7 @@ const form = document.querySelector(".js-todo"),
   list = document.querySelector(".todo-list");
 
 const TODOS = "todos";
+const FINISHED_CN = "finished";
 
 let todoList = [];
 
@@ -13,7 +14,7 @@ function saveTodos() {
 function finishTodo(e) {
   const btn = e.target;
   const li = btn.parentNode;
-  btn.classList.toggle("finished");
+  btn.classList.toggle(FINISHED_CN);
   todoList = todoList.map(function (todo) {
     if (todo.id === parseInt(li.id, 10)) {
       todo.finish = !todo.finish;
@@ -41,7 +42,7 @@ function paintTodo(todo) {
   const span = document.createElement("span");
   const newId = todoList.length + 1;
 
-  checkBtn.classList.add("far", "fa-check-circle");
+  checkBtn.classList.add("far", "fa-check-circle", finish && FINISHED_CN);
   checkBtn.addEventListener("click", finishTodo);
 
   delBtn.classList.add("fas", "fa-trash");
