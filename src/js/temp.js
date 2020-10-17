@@ -20,12 +20,15 @@ const getWeatherData = (lat, lon, region) => {
         main: { temp },
       } = json;
 
+      if (!name || !temp) return;
+
       tempElem.innerText = `${temp} °`;
 
       const locaIcon = document.createElement("i");
       locaIcon.classList.add("fas", "fa-map-marker-alt");
       const span = document.createElement("span");
       span.innerText = name.toUpperCase();
+      location.innerText = "";
       location.append(locaIcon);
       location.append(span);
     })
