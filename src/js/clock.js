@@ -8,7 +8,10 @@ const clock = document.querySelector(".js-clock"),
 const ACTIVE_CN = "active";
 
 function checkHour(hours, mins) {
-  if ((hours !== 0 || hours !== 12) && mins !== 0) {
+  if (
+    (hours > 0 && hours < 12) ||
+    ((hours === 0 || hours === 12) && mins > 0)
+  ) {
     hourElem.classList.add(ACTIVE_CN);
   } else {
     hourElem.classList.remove(ACTIVE_CN);
