@@ -3,6 +3,7 @@ import "../styles/style.css";
 import "../styles/name.css";
 import "../styles/clock.css";
 import "../styles/todo.css";
+import "../styles/temp.css";
 
 import img1 from "../images/1.jpg";
 import img2 from "../images/2.jpg";
