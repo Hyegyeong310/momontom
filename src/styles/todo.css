@@ -1,0 +1,66 @@
+.todo {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo-list {
+  width: 100%;
+  margin-top: 20px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.todo-list li {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background: rgba(256, 256, 256, 0.3);
+  border-radius: 5px;
+  font-size: 20px;
+  color: #353b48;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.todo-list li:hover {
+  background: rgba(256, 256, 256, 0.6);
+}
+
+.todo-list li span {
+  flex: 100%;
+}
+
+.todo-list li i {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: transparent;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.todo-list li i:hover {
+  opacity: 1;
+}
+
+.todo-list .finished {
+  color: #fc5c65;
+  opacity: 1;
+}
+
+.todo-list .finished + span {
+  text-decoration: line-through;
+}
+
+.todo-list .fa-trash {
+  color: #353b48;
+}
