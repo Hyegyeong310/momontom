@@ -4,10 +4,10 @@
   "description": "Nomad Coders VanillaJS-challenge 졸업작품",
   "main": "index.html",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url /momontom/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Hyegyeong310/momontom/issues"
   },
-  "homepage": "https://hyegyeong310.github.io/momontom/",
+  "homepage": "https://hyegyeong310.github.io/momontom",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.3",
