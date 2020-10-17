@@ -22,7 +22,7 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  background: rgba(256, 256, 256, 0.3);
+  background: rgba(256, 256, 256, 0.5);
   border-radius: 5px;
   font-size: 20px;
   color: #353b48;
@@ -59,6 +59,7 @@
 
 .todo-list .finished + span {
   text-decoration: line-through;
+  color: #dff9fb;
 }
 
 .todo-list .fa-trash {
