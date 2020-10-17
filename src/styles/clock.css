@@ -1,0 +1,44 @@
+.main__clock {
+  position: relative;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 37px;
+  width: 360px;
+  padding: 40px;
+  display: inline-block;
+  pointer-events: none;
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
+.main__clock::before,
+.main__clock::after {
+  position: absolute;
+  content: " ";
+  width: 40px;
+  height: 40px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.main__clock::before {
+  top: 0;
+  left: 0;
+  border-width: 7px 0 0 7px;
+}
+
+.main__clock::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 7px 7px 0;
+}
+
+.main__clock span {
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+
+.main__clock span.active {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 hsla(0, 0%, 41%, 0.4);
+}
